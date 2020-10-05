@@ -5,17 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th>Brand</th>
-        <th>Color</th>
-        <th>Power</th>
-    </tr>
-    <tr th:each="result : ${result}">
-        <td th:utext=${result.brand}>...</td>
-        <td th:utext=${result.color}>...</td>
-        <td th:utext=${result.power}>...</td>
-    </tr>
-</table>
+<div>
+    <table border="1">
+        <tr>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Power</th>
+        </tr>
+        <tr th:each="result : ${result}">
+            <td th:utext=${result.brand}></td>
+            <td th:utext=${result.color}></td>
+            <td th:utext=${result.power}></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

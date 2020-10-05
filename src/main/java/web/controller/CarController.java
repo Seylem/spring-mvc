@@ -13,19 +13,22 @@ import java.util.List;
 
 @Controller
 public class CarController {
-    private List<Car> carList =  new CarServiceImpl().car();
-    private List<Car> temp = new ArrayList<>();
 
     @GetMapping("/cars")
-    public String getListCar(@RequestParam(value = "count", required = false) int count, Model model) {
+    public String getListCar(@RequestParam(value = "count", required = false, defaultValue = "5") Integer count, Model model) {
+
+        List<Car> temp = new ArrayList<>();
+
+        if (count > 5 || count == null) {
+            count = 5;
+        }
 
         for (int i = 0; i < count; i++) {
             temp.add(new CarServiceImpl().car().get(i));
         }
+
         model.addAttribute("result", temp);
 
-
-        System.out.println(carList.toString());
         return "cars";
     }
 

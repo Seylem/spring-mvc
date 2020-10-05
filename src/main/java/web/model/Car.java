@@ -1,9 +1,9 @@
 package web.model;
 
 public class Car {
-    private static String brand;
-    private static String color;
-    private static int power;
+    private String brand;
+    private String color;
+    private int power;
 
     public Car(String brand, String color, int power) {
         this.brand = brand;
@@ -11,28 +11,28 @@ public class Car {
         this.power = power;
     }
 
-    public static String getBrand() {
+    public String getBrand() {
         return brand;
     }
 
-    public static void setBrand(String brand) {
-        Car.brand = brand;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public static String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public static void setColor(String color) {
-        Car.color = color;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public static int getPower() {
+    public int getPower() {
         return power;
     }
 
-    public static void setPower(int power) {
-        Car.power = power;
+    public void setPower(int power) {
+        this.power = power;
     }
 
     @Override
