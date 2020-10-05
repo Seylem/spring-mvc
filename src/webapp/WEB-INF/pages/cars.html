@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Color</th>
+        <th>Power</th>
+    </tr>
+    <tr th:each="result : ${result}">
+        <td th:utext=${result.brand}>...</td>
+        <td th:utext=${result.color}>...</td>
+        <td th:utext=${result.power}>...</td>
+    </tr>
+</table>
+</body>
+</html>
